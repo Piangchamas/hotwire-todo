@@ -29,7 +29,7 @@
       </div>
     <div class="flex-1">
       <%= form.label :assigned_name, "Assigned to", class: "font-medium" %>
-      <%= form.select :assigned_name, options_for_select(['Net', 'Junior', 'Fiw', 'Pun', 'Dara', 'Tek']), {}, class: "shadow rounded-md border border-gray-300 outline-none px-3 w-full py-2 mt-2 bg-transparent hover:border-blue-600" %>
+      <%= form.select :assigned_name, options_for_select([['Select', '', { disabled: true, selected: true }],'Net', 'Junior', 'Fiw', 'Pun', 'Dara', 'Tek']), {}, class: "shadow rounded-md border border-gray-300 outline-none px-3 w-full py-2 mt-2 bg-transparent hover:border-blue-600" %>
     </div>
   </div>
   <% end %>
