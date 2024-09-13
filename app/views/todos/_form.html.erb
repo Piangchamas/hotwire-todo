@@ -20,9 +20,19 @@
   </div>
   <div class="my-5">
     <% if todo.persisted? %>
-    <%= form.label :due_date, "Due date", class: "mt-4 font-medium" %>
-        <%= form.date_field :due_date, min: Date.tomorrow, class: "shadow rounded-md border border-gray-300 outline-none px-3 py-2 mt-2 w-full bg-transparent hover:border-blue-600" %>
-    <% end %>
+  <div class="flex gap-3">
+    <div class="flex-1">
+      <%= form.label :due_date, "Due date", class: "mt-4 font-medium " %>
+      <%= form.datetime_field :due_date, min: Date.tomorrow, class: "shadow rounded-md border border-gray-300 outline-none px-3 py-10 mt-2 bg-transparent hover:border-blue-600" %>
+    </div>
+    <div>
+      </div>
+    <div class="flex-1">
+      <%= form.label :assigned_name, "Assigned to", class: "font-medium" %>
+      <%= form.select :assigned_name, options_for_select(['Net', 'Junior', 'Fiw', 'Pun', 'Dara', 'Tek']), {}, class: "shadow rounded-md border border-gray-300 outline-none px-3 w-full py-2 mt-2 bg-transparent hover:border-blue-600" %>
+    </div>
+  </div>
+  <% end %>
   </div>
 
 <% end %>
